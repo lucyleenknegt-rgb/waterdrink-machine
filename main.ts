@@ -1,5 +1,8 @@
 input.onButtonPressed(Button.A, function () {
     if (waterlevel > 0) {
+        robotbit.MotorRun(robotbit.Motors.M1A, 255)
+        basic.pause(1500)
+        robotbit.MotorRun(robotbit.Motors.M1A, 0)
         waterlevel += -1
         tekenWaterlevel()
     }
